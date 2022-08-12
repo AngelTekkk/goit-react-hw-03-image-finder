@@ -96,7 +96,6 @@ export class App extends Component {
       isLoading,
       isMoreImages,
       currentPage,
-      perPage,
       modal: { src, alt, isOpen },
     } = this.state;
     const isLoadMore = isMoreImages > currentPage && !isLoading;
