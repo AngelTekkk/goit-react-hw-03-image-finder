@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Report } from 'notiflix';
 
 import {
   Button,
@@ -23,6 +24,10 @@ export class App extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
+    if (this.state.searchQuery === '') {
+      Report.warning('Please enter your search query');
+      return;
+    }
     if (
       prevState.searchQuery !== this.state.searchQuery ||
       prevState.currentPage !== this.state.currentPage
