@@ -10,7 +10,7 @@ export default class Searchbar extends Component {
   handleChange = e => {
     const { value, name } = e.target;
     this.setState(() => ({
-      [name]: value,
+      [name]: value.trim(),
     }));
   };
 
